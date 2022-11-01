@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventify</title>
+    <title>CaloTiket</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
@@ -12,73 +12,174 @@
 <body>
     <header>
         <div class="nav container">
-            <a href="#" class="logo">Eventify</a>
-            <i class="bx bx-shopping-bag" id="cart-icon"></i>
+            <a href="#" class="logo">CaloTiket</a>
+            <div>
+                <i class="bx bx-bell" id="bell-icon"></i>
+                <i class="bx bx-shopping-bag" id="cart-icon"></i>
+            </div>
             <div class="cart">
                 <h2 class="cart-title">Your Cart</h2>
-                <div class="cart-content">
-                  
-                </div>
+                <div class="cart-content"></div>
                 <div class="total">
                     <div class="total-title">Total</div>
                     <div class="total-price">$0</div>
                 </div>
                 <button type="button" class="btn-buy">Buy Now</button>
+                <div class="cart-payment">
+                    <!-- <div class="order-info">
+                        <p class="no-order">No order 1</p>
+                        <p class="order-status">waiting for your payment</p>
+                    </div>
+                    <p>Schematics NPC</p>
+                    <p>Total : 30$</p> -->
+                </div>
                 <i class="bx bx-x" id="close-cart"></i>
             </div>
+            <div class="bell">
+                <h2 class="bell-title">Notification</h2>
+                <div class="bell-content"></div>
+             
+                <div class="cart-payment"></div>
+                <i class="bx bx-x" id="close-cart-bell"></i>
+            </div>
+            
         </div>
     </header>
     <section class="shop container">
-        <h2 class="section-title">Shop Products</h2>
+        <!-- <h2 class="section-title">Order Tickets</h2> -->
+        <div class="slides">
+            <div class="slide">
+              <img src="img/carousel1.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="img/carousel2.jpg" alt="">
+            </div>
+            <div class="navigation">
+              <a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+              <a class = "next" onclick = "plusSlides(-1)">&#10095;</a>
+            </div>
+          </div>
         <div class="shop-content">
-            <div class="product-box">
-                <img src="img/product1.jpg" alt="" class="product-img">
-                <h2 class="product-title">Schematics Reeva</h2>
+            <form action="event/event1.html" method="POST">        
+            <div class="product-box" >
+                <button type="submit" class="button_style">
+                    <img src="img/product1.jpg" alt="" class="product-img">
+                    <h2 class="product-title" id="product-title">Schematics Reeva</h2>
+                    <p class="product-date">Surabaya, 7 November 2022</p>
+                    <div class="product-store">
+                    <i class='bx bx-store store'></i>
+                    <p>Schematics</p>
+                    </div>
+                </button>
                 <span class="price">$15</span>
                 <i class='bx bx-shopping-bag add-cart'></i>
             </div>
-            <div class="product-box">
-                <img src="img/product1.jpg" alt="" class="product-img">
-                <h2 class="product-title">Schematics NST</h2>
-                <span class="price">$10</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/product1.jpg" alt="" class="product-img">
-                <h2 class="product-title">Schematics NPC</h2>
-                <span class="price">$12</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/product1.jpg" alt="" class="product-img">
-                <h2 class="product-title">Schematics NLC</h2>
-                <span class="price">$14</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/product1.jpg" alt="" class="product-img">
-                <h2 class="product-title">Chernival</h2>
-                <span class="price">$20</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/product1.jpg" alt="" class="product-img">
-                <h2 class="product-title">Pesta Bayangan</h2>
-                <span class="price">$25</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/product1.jpg" alt="" class="product-img">
-                <h2 class="product-title">Seminar Data Science</h2>
-                <span class="price">$17</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
-            <div class="product-box">
-                <img src="img/product1.jpg" alt="" class="product-img">
-                <h2 class="product-title">Pameran Wayang</h2>
-                <span class="price">$18</span>
-                <i class='bx bx-shopping-bag add-cart'></i>
-            </div>
+            </form>
+            <form action="event/event2.html" method="POST">        
+                <div class="product-box" >
+                    <button type="submit" class="button_style">
+                        <img src="img/product1.jpg" alt="" class="product-img">
+                        <h2 class="product-title" id="product-title">Schematics NLC</h2>
+                        <p class="product-date">Surabaya, 8 November 2022</p>
+                        <div class="product-store">
+                        <i class='bx bx-store store'></i>
+                        <p>Schematics</p>
+                        </div>
+                    </button>
+                    <span class="price">$16</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+            </form>
+            <form action="event/event3.html" method="POST">        
+                <div class="product-box" >
+                    <button type="submit" class="button_style">
+                        <img src="img/product1.jpg" alt="" class="product-img">
+                        <h2 class="product-title" id="product-title">Schematics NPC</h2>
+                        <p class="product-date">Surabaya, 9 November 2022</p>
+                        <div class="product-store">
+                        <i class='bx bx-store store'></i>
+                        <p>Schematics</p>
+                        </div>
+                    </button>
+                    <span class="price">$17</span>
+                    <i class='bx bx-shopping-bag add-cart'></i>
+                </div>
+                </form>
+                <form action="event/event4.html" method="POST">        
+                    <div class="product-box" >
+                        <button type="submit" class="button_style">
+                            <img src="img/product1.jpg" alt="" class="product-img">
+                            <h2 class="product-title" id="product-title">Schematics NST</h2>
+                            <p class="product-date">Surabaya, 10 November 2022</p>
+                            <div class="product-store">
+                            <i class='bx bx-store store'></i>
+                            <p>Schematics</p>
+                            </div>
+                        </button>
+                        <span class="price">$18</span>
+                        <i class='bx bx-shopping-bag add-cart'></i>
+                    </div>
+                    </form>
+                    <form action="event/event5.html" method="POST">        
+                        <div class="product-box" >
+                            <button type="submit" class="button_style">
+                                <img src="img/product1.jpg" alt="" class="product-img">
+                                <h2 class="product-title" id="product-title">Pesta Bayangan</h2>
+                                <p class="product-date">Jakarta, 11 November 2022</p>
+                                <div class="product-store">
+                                <i class='bx bx-store store'></i>
+                                <p>Schematics</p>
+                                </div>
+                            </button>
+                            <span class="price">$19</span>
+                            <i class='bx bx-shopping-bag add-cart'></i>
+                        </div>
+                        </form>
+                        <form action="event/event6.html" method="POST">        
+                            <div class="product-box" >
+                                <button type="submit" class="button_style">
+                                    <img src="img/product1.jpg" alt="" class="product-img">
+                                    <h2 class="product-title" id="product-title">Seminar Nasional</h2>
+                                    <p class="product-date">Surabaya, 12 November 2022</p>
+                                    <div class="product-store">
+                                    <i class='bx bx-store store'></i>
+                                    <p>Schematics</p>
+                                    </div>
+                                </button>
+                                <span class="price">$20</span>
+                                <i class='bx bx-shopping-bag add-cart'></i>
+                            </div>
+                            </form>
+                            <form action="event/event7.html" method="POST">        
+                                <div class="product-box" >
+                                    <button type="submit" class="button_style">
+                                        <img src="img/product1.jpg" alt="" class="product-img">
+                                        <h2 class="product-title" id="product-title">Chernival</h2>
+                                        <p class="product-date">Surabaya, 13 November 2022</p>
+                                        <div class="product-store">
+                                        <i class='bx bx-store store'></i>
+                                        <p>Schematics</p>
+                                        </div>
+                                    </button>
+                                    <span class="price">$21</span>
+                                    <i class='bx bx-shopping-bag add-cart'></i>
+                                </div>
+                                </form>
+                                <form action="event/event8.html" method="POST">        
+                                    <div class="product-box" >
+                                        <button type="submit" class="button_style">
+                                            <img src="img/product1.jpg" alt="" class="product-img">
+                                            <h2 class="product-title" id="product-title">Pameran Wayang</h2>
+                                            <p class="product-date">Surabaya, 14 November 2022</p>
+                                            <div class="product-store">
+                                            <i class='bx bx-store store'></i>
+                                            <p>Schematics</p>
+                                            </div>
+                                        </button>
+                                        <span class="price">$22</span>
+                                        <i class='bx bx-shopping-bag add-cart'></i>
+                                    </div>
+                                    </form>
         </div>
     </section>
     <script src="main.js"></script>
