@@ -7,7 +7,7 @@
 - Surya Abdillah 
 - Gaudhiwaa Hendrasto 
 
-**Nama Aplikasi:** -
+**Nama Aplikasi:** CaloTiket
 
 **Problem Statement:**
 
